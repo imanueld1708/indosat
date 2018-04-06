@@ -1,0 +1,80 @@
+	
+
+There are 2 file types in this data set :
+
+1. Subscriber file
+
+Description : Contains list of subscriber billing summary information
+
+File name pattern : CUST_[ddMMyyhhmmssSSS]_[Group_ID]
+
+File format : CSV, "|" Separated
+
+File content : 
+
+	MSISDN,subscriber phone number (will be anonimized)
+	
+INVOICENUMBER,identification of the invoice. Every month subscriber will get different invoice#
+
+	INVOICEDATE, Date when invoice is created
+
+	ACCOUNTNUMBER,account number is a customer unique identification. 1 customer could have more than one 
+	
+BILLTYPE
+ISCORPTREATMENT, Value 1 for Corporate Customer, 0 for Individual 
+	
+BILLDATE
+MONTHLYFEE, Fixed Subscription Monthly Fee
+
+	THISMONTHBILL, Total Billing + outstanding payment from previous months (if any)
+
+	TOTALBILLING, Total Billing this month
+	
+ACCOUNTTYPE
+CALLINGPLAN, Main Subscription Plan name
+	
+PACKAGECODE, Main Subscription Plan code
+
+	VOICE, Total voice duration in seconds
+	
+SMS, Total SMS count
+	
+DATA, Total Data Usage in 
+	KB
+LOCALCHARGES, Total Local Call Charges
+
+	LONGDISTANCE, Total Long Distance Charges
+
+	IDDCHARGES, Total International Direct Dialling Charges
+
+	IRCHARGES, Total International Roaming Charges
+
+	VIDEOCHARGES, Video Streaming Charges (for separated video streaming plan)
+	
+SMSCHARGES, Total SMS Charges
+
+	DATACHARGES, Total Data Charges
+	
+SUBTOTAL, Total Billing before 
+	VAT
+DISCOUNT, Total Discount
+
+	ADJUSTMENT, Billing Correction or Adjustment
+
+2. 
+2. Usage file
+File name pattern : 
+File name pattern : SU_[ddMMyyhhmmssSSS]_[Group_ID]
+
+File format : CSV, "|" Separated
+
+File content :
+	
+MSISDN,subscriber phone number (will be anonimized)
+	
+INVOICENUMBER,identification of the invoice. Every month subscriber will get different invoice#
+
+	ACCOUNTNUMBER,account number is a customer unique identification. 1 customer could have more than one 
+ITEM, Usage or Additional Plan item bought by this customer
+
+	AMOUNT, Price of the item bought.
